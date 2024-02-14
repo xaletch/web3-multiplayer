@@ -1,0 +1,38 @@
+.orange-btn {
+  width: 218px;
+  margin-bottom: 6px;
+  margin-left: 7px;
+  position: relative;
+  padding: 12px 25px;
+
+  text-align: center;
+  color: var(--natural-white);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  z-index: 2;
+  user-select: none;
+}
+.orange-btn:hover {
+  opacity: 0.9;
+}
+.orange-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--orange-color);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+  z-index: -1;
+}
+.orange-btn svg {
+  width: 218px;
+  position: absolute;
+  left: -7px;
+  top: 6px;
+  z-index: -2;
+}

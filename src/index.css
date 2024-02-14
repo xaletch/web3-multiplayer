@@ -1,0 +1,136 @@
+:root {
+  --container: 1520px;
+  --padding-container: 20px;
+  --container-width: calc(
+    var(var(--container) + (var(var(--padding-container) * 2)))
+  );
+
+  --bg-page: #030002;
+  --natural-white: #fff;
+  --orange-color: #ff5c00;
+  --gray-colors-300: #d1d5db;
+  --bg-dark-800: rgba(26, 26, 26, 0.8);
+  --bg-secondary: #f9f9f9;
+
+  --Font-StolzlBook: "Stolzl-Book", sans-serif;
+  --Font-strolzl: "Stolzl", sans-serif;
+  --Font-strolzlBebasNeue: "Bebas Neue", sans-serif;
+}
+
+/* СБРОС БАЗОВЫХ СТИЛЕЙ */
+html {
+  box-sizing: border-box;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  height: 500px;
+  background: var(--bg-page);
+  color: var(--natural-white);
+  font-family: var(--Font-strolzl);
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+  margin: 0;
+}
+
+span {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+
+input,
+textarea {
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+/* ШРИФТЫ */
+@font-face {
+  font-family: "";
+  src: url();
+  font-style: normal;
+  font-weight: 400;
+}
+/* STOLZL */
+@font-face {
+  font-family: "Stolzl-Book";
+  src: url("./assets/fonts/stolzl_book.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Stolzl";
+  src: url("./assets/fonts/stolzl_regular.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Stolzl";
+  src: url("./assets/fonts/stolzl_medium.otf");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Stolzl";
+  src: url("./assets/fonts/stolzl_bold.otf");
+  font-style: normal;
+  font-weight: 700;
+}
+
+.container {
+  max-width: calc(var(--container) + (var(--padding-container) * 2));
+  min-width: 310px;
+  padding: 0 var(--padding-container);
+  margin: 0 auto;
+}
