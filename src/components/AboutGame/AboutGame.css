@@ -1,0 +1,37 @@
+.about-game {
+  background-image: url("../../assets/images/city-map-of-florence-with-well-organized-separated-layers.png");
+  /* background-position: center; */
+  background-repeat: no-repeat;
+}
+.about-game_wrapper {
+  padding: 64px 0 180px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.about-game_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-game_item-img {
+  width: 485px;
+  height: 300px;
+  border-radius: 2px;
+  object-fit: cover;
+  object-position: left top;
+}
+.about-game_item-title {
+  color: var(--orange-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.about-game_item-description {
+  margin-top: 15px;
+  color: var(--natural-white);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}

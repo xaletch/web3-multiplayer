@@ -1,0 +1,155 @@
+.popular-characters_wrapper {
+  padding: 180px 0;
+}
+.popular-characters_description {
+  max-width: 1010px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popular-characters_description-name {
+  text-align: center;
+  color: var(--bg-secondary-5);
+  font-size: 66px;
+  font-weight: 500;
+  line-height: 66px;
+}
+.popular-characters_description-text {
+  max-width: 654px;
+  margin-top: 7px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--gray-colors-300);
+  font-size: 20px;
+  font-family: var(--Font-StolzlBook);
+  font-weight: 400;
+  line-height: 30px;
+}
+.popular-characters_running-cards {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+.popular-characters_running-cards_content {
+  width: 100%;
+  display: flex;
+  gap: 37px;
+}
+.popular-characters_running-cards_content:nth-child(1) {
+  animation: runCardsLeft 35s linear infinite;
+}
+.popular-characters_running-cards_content:nth-child(2) {
+  animation: runCardsRight 80s linear infinite;
+}
+
+.popular-characters_running-cards_item {
+  min-width: 274px;
+  max-height: 359px;
+  border-radius: 8px;
+  border: 3px solid var(--bg-gray-500);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease-in-out;
+}
+.popular-characters_running-cards_item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(37deg, #000 0.01%, rgba(22, 19, 26, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.popular-characters_running-cards_content:nth-child(1):hover {
+  animation-play-state: paused;
+}
+.popular-characters_running-cards_content:nth-child(2):hover {
+  animation-play-state: paused;
+}
+
+.popular-characters_running-cards_item:hover {
+  border-color: var(--orange-color);
+  animation-play-state: paused;
+}
+.popular-characters_running-cards_item:hover
+  .popular-characters_running-cards_item_description {
+  display: flex;
+}
+.popular-characters_running-cards_item:hover::before {
+  opacity: 1;
+}
+
+.popular-characters_running-cards_item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.popular-characters_running-cards_item_description {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  animation: cardInfoAnimation 0.3s ease;
+}
+.popular-characters_running-cards_item_description-name {
+  color: var(--bg-secondary-5);
+  font-size: 26px;
+  font-family: var(--Font-StolzlBook);
+  font-weight: 400;
+  line-height: 110%;
+}
+.popular-characters_running-cards_item_description-ability {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.popular-characters_running-cards_item_description-ability img {
+  width: 14px;
+  height: 14px;
+}
+.popular-characters_running-cards_item_description-ability_name {
+  color: var(--orange-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+  text-transform: uppercase;
+}
+@keyframes runCardsLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes runCardsRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes cardInfoAnimation {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.popular-characters_running-cards_content:nth-child(1) {
+  /* animation-delay: -15s; */
+}
