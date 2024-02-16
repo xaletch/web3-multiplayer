@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import link_img from "../../assets/LinkImg";
 import "./DescriptionCharacters.css";
 
@@ -78,6 +78,7 @@ export const DescriptionCharacters = () => {
         style={{
           backgroundImage: `url(${heroItems[currentIndex].backgroundImg})`,
           backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
         }}
       >
         <div className="description-characters_content">

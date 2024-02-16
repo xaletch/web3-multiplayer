@@ -216,6 +216,7 @@ export const PopularCharacters = () => {
       style={{
         backgroundImage: `url(${link_img.popularCharactersBg})`,
         backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
       }}
     >
       <div className="popular-characters_wrapper">

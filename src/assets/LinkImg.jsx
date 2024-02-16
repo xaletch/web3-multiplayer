@@ -41,6 +41,13 @@ import emberWarrior from "./images/Wild_Fire_The_Ember_Warrior_now_has.png";
 
 // ИКОНКИ ПЕРСОНАЖЕЙ
 import iconArcher from "./icons/iconArcher.svg";
+
+// ВИДЕО ДЛЯ ГЛАВНОЙ СТАНИЦЫ
+import hoveVideoImg from "./images/video image.png";
+import homeVideo from "./video/video.MP4";
+
+import subscribe from "./images/subscribe.png";
+
 const link_img = {
   logo: logo,
   lang: lang,
@@ -77,6 +84,9 @@ const link_img = {
   venomBite: venomBite,
   romanGodLike: romanGodLike,
   emberWarrior: emberWarrior,
+  hoveVideoImg: hoveVideoImg,
+  homeVideo: homeVideo,
+  subscribe: subscribe,
 };
 
 export default link_img;

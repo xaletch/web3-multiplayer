@@ -2,7 +2,9 @@
   height: 1024px;
 }
 .description-characters_wrapper {
+  max-width: 1923px;
   height: 100%;
+  margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;

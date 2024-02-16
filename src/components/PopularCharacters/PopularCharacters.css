@@ -120,7 +120,7 @@
   line-height: 160%;
   text-transform: uppercase;
 }
-@keyframes runCardsLeft {
+/* @keyframes runCardsLeft {
   0% {
     transform: translateX(0%);
   }
@@ -135,7 +135,7 @@
   100% {
     transform: translateX(100%);
   }
-}
+} */
 
 @keyframes cardInfoAnimation {
   0% {

@@ -1,0 +1,73 @@
+.subscribe_wrapper {
+  padding: 180px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.subscribe_text-subscription {
+  display: flex;
+  align-items: center;
+  color: var(--orange-color);
+  font-size: 24px;
+  font-family: var(--Font-strolzlBebasNeue);
+  font-weight: 700;
+  text-transform: uppercase;
+  gap: 8px;
+}
+.subscribe_text-subscription_line {
+  width: 40px;
+  height: 2px;
+  border-radius: 50px;
+  background: var(--orange-color);
+}
+.subscribe_text-title {
+  margin-top: 18px;
+  color: var(--natural-white);
+  font-size: 60px;
+  font-family: var(--Font-strolzlBebasNeue);
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.subscribe_text-button {
+  margin-top: 30px;
+  width: 184px;
+  padding: 15px 20px;
+  border: 1.5px solid var(--orange-color);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--natural-white);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.subscribe_text-button span {
+  min-width: 36px;
+  height: 36px;
+  background: var(--orange-color);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subscribe_text-button:hover {
+  background: var(--orange-color);
+}
+.subscribe_text-button:hover span {
+  background: var(--natural-white);
+  transition: all 0.3s ease;
+}
+.subscribe_text-button:hover svg path {
+  fill: var(--orange-color);
+  transition: all 0.3s ease;
+}
+.subscribe_image {
+  max-width: 1075px;
+  height: 100%;
+}
