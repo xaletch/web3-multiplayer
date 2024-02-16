@@ -1,5 +1,6 @@
 .popular-characters_wrapper {
   padding: 180px 0;
+  overflow: hidden;
 }
 .popular-characters_description {
   max-width: 1010px;
@@ -120,7 +121,7 @@
   line-height: 160%;
   text-transform: uppercase;
 }
-/* @keyframes runCardsLeft {
+@keyframes runCardsLeft {
   0% {
     transform: translateX(0%);
   }
@@ -135,7 +136,7 @@
   100% {
     transform: translateX(100%);
   }
-} */
+}
 
 @keyframes cardInfoAnimation {
   0% {

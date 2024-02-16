@@ -7,13 +7,13 @@ import { Subscribe } from "../components/Subscribe/Subscribe";
 
 export const Home = () => {
   return (
-    <div className="">
+    <>
       <Hero />
       <AboutGame />
       <DescriptionCharacters />
       <PopularCharacters />
       <Video />
       <Subscribe />
-    </div>
+    </>
   );
 };

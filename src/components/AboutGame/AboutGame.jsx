@@ -2,6 +2,8 @@ import link_img from "../../assets/LinkImg";
 
 import "./AboutGame.css";
 
+import { OrangeButton } from "../Buttons/OrangeButton/OrangeButton";
+
 const aboutGame = [
   { img: link_img.aboutImg1 },
   {
@@ -46,21 +48,26 @@ export const AboutGame = () => {
     <div className="about-game">
       <div className="container">
         <div className="about-game_wrapper">
-          {aboutGame.map((item, index) => (
-            <div className="about-game_item" key={index}>
-              {item.img && (
-                <img className="about-game_item-img" src={item.img} alt="" />
-              )}
-              {item.name && (
-                <h3 className="about-game_item-title">{item.name}</h3>
-              )}
-              {item.description && (
-                <p className="about-game_item-description">
-                  {item.description}
-                </p>
-              )}
-            </div>
-          ))}
+          <div className="about-game_card-content">
+            {aboutGame.map((item, index) => (
+              <div className="about-game_item" key={index}>
+                {item.img && (
+                  <img className="about-game_item-img" src={item.img} alt="" />
+                )}
+                {item.name && (
+                  <h3 className="about-game_item-title">{item.name}</h3>
+                )}
+                {item.description && (
+                  <p className="about-game_item-description">
+                    {item.description}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+          <OrangeButton index={"about-game_button"}>
+            Connect Wallet
+          </OrangeButton>
         </div>
       </div>
     </div>

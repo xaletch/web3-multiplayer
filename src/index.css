@@ -1,6 +1,6 @@
 :root {
-  --container: 1520px;
-  --padding-container: 20px;
+  --container: 1528px;
+  --padding-container: 16px;
   --container-width: calc(
     var(var(--container) + (var(var(--padding-container) * 2)))
   );
@@ -31,7 +31,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100%;
-  height: 500px;
+  height: 100%;
   background: var(--bg-page);
   color: var(--natural-white);
   font-family: var(--Font-strolzl);

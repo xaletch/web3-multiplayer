@@ -1,8 +1,8 @@
 import "./orangeButton.css";
 
-export const OrangeButton = ({ children }) => {
+export const OrangeButton = ({ children, index }) => {
   return (
-    <button className="orange-btn">
+    <button className={`orange-btn ${index}`}>
       <svg
         width="218"
         height="49"

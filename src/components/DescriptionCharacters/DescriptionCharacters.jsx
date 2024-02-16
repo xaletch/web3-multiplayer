@@ -48,6 +48,7 @@ const heroItems = [
 export const DescriptionCharacters = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isOpenMenu, setOpenMenu] = useState(false);
 
   const handlePrevClick = () => {
     setIsAnimating(true);
@@ -84,7 +85,9 @@ export const DescriptionCharacters = () => {
         <div className="description-characters_content">
           <img
             className={`description-characters_hero ${
-              currentIndex == 3
+              currentIndex == 0
+                ? "description-characters_hero-img_1"
+                : "" || currentIndex == 3
                 ? "description-characters_hero-img_3"
                 : "" || currentIndex == 2
                 ? "description-characters_hero-img_2"
@@ -108,6 +111,26 @@ export const DescriptionCharacters = () => {
               <p className="description-characters_description-text">
                 {heroItems[currentIndex].description}
               </p>
+              <button
+                className="description-characters_description-more"
+                onClick={() => setOpenMenu(!isOpenMenu)}
+              >
+                more detailed
+                <span>
+                  <svg
+                    width="14"
+                    height="16"
+                    viewBox="0 0 14 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V7ZM13.7071 8.70711C14.0976 8.31658 14.0976 7.68342 13.7071 7.29289L7.34315 0.928932C6.95262 0.538408 6.31946 0.538408 5.92893 0.928932C5.53841 1.31946 5.53841 1.95262 5.92893 2.34315L11.5858 8L5.92893 13.6569C5.53841 14.0474 5.53841 14.6805 5.92893 15.0711C6.31946 15.4616 6.95262 15.4616 7.34315 15.0711L13.7071 8.70711ZM1 9H13V7H1V9Z"
+                      fill="#FF5C00"
+                    />
+                  </svg>
+                </span>
+              </button>
             </div>
             <div className="description-characters_buttons">
               <button
@@ -245,6 +268,70 @@ export const DescriptionCharacters = () => {
             </linearGradient>
           </defs>
         </svg>
+      </div>
+      <div
+        className={`description-characters_menu ${
+          isOpenMenu ? "description-characters_menu-open" : ""
+        }`}
+      >
+        <button
+          className={`header_button-menu description-characters_menu-btn ${
+            isOpenMenu ? "header_button-menu_open" : ""
+          }`}
+          onClick={() => setOpenMenu(!isOpenMenu)}
+        >
+          <svg
+            width="51"
+            height="37"
+            viewBox="0 0 51 37"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.508563 36.5L1.11992 0.5H50.4813L49.1567 36.5H0.508563Z"
+              stroke="#F9F9F9"
+            />
+          </svg>
+          <span>
+            {isOpenMenu ? (
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.94269 7.99597L15.8048 1.13385C16.0606 0.869036 16.0533 0.446966 15.7885 0.19118C15.5301 -0.0583556 15.1205 -0.0583556 14.8621 0.19118L7.99998 7.0533L1.13786 0.19118C0.873015 -0.0646057 0.450977 -0.0572618 0.195191 0.207555C-0.0543447 0.465904 -0.0543447 0.875505 0.195191 1.13385L7.05731 7.99597L0.195191 14.8581C-0.0650636 15.1184 -0.0650636 15.5404 0.195191 15.8008C0.455539 16.061 0.877547 16.061 1.13786 15.8008L7.99998 8.93865L14.8621 15.8008C15.1225 16.061 15.5445 16.061 15.8048 15.8008C16.065 15.5404 16.065 15.1184 15.8048 14.8581L8.94269 7.99597Z"
+                  fill="#FF5C00"
+                />
+              </svg>
+            ) : (
+              <svg
+                width="27"
+                height="14"
+                viewBox="0 0 27 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="27" height="1.5" fill="white" />
+                <rect y="6" width="27" height="1.5" fill="white" />
+                <rect y="12" width="27" height="1.5" fill="white" />
+              </svg>
+            )}
+          </span>
+        </button>
+        <div className="description-characters_menu-wrapper">
+          <h2 className="description-characters_menu-name">
+            {heroItems[currentIndex].name}
+          </h2>
+          <span className="description-characters_menu-ability">
+            {heroItems[currentIndex].ability}
+          </span>
+          <p className="description-characters_menu-text">
+            {heroItems[currentIndex].description}
+          </p>
+        </div>
       </div>
     </div>
   );
