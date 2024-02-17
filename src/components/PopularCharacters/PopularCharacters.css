@@ -38,15 +38,12 @@
   display: flex;
   gap: 37px;
 }
-.popular-characters_running-cards_content:nth-child(1) {
-  animation: runCardsLeft 35s linear infinite;
-}
-.popular-characters_running-cards_content:nth-child(2) {
-  animation: runCardsRight 80s linear infinite;
+.popular-characters_running-cards_content {
+  margin-right: 37px;
 }
 
 .popular-characters_running-cards_item {
-  min-width: 274px;
+  width: 274px;
   max-height: 359px;
   border-radius: 8px;
   border: 3px solid var(--bg-gray-500);
@@ -65,12 +62,6 @@
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
-.popular-characters_running-cards_content:nth-child(1):hover {
-  animation-play-state: paused;
-}
-.popular-characters_running-cards_content:nth-child(2):hover {
-  animation-play-state: paused;
-}
 
 .popular-characters_running-cards_item:hover {
   border-color: var(--orange-color);
@@ -78,7 +69,7 @@
 }
 .popular-characters_running-cards_item:hover
   .popular-characters_running-cards_item_description {
-  display: flex;
+  animation: cardInfoAnimation 0.3s ease forwards;
 }
 .popular-characters_running-cards_item:hover::before {
   opacity: 1;
@@ -91,12 +82,14 @@
 }
 .popular-characters_running-cards_item_description {
   position: absolute;
+  display: flex;
   bottom: 22px;
   left: 22px;
-  display: none;
+  transform: translateY(100%);
+  opacity: 0;
   flex-direction: column;
   gap: 10px;
-  animation: cardInfoAnimation 0.3s ease;
+  animation-fill-mode: forwards;
 }
 .popular-characters_running-cards_item_description-name {
   color: var(--bg-secondary-5);
@@ -120,22 +113,6 @@
   font-weight: 400;
   line-height: 160%;
   text-transform: uppercase;
-}
-@keyframes runCardsLeft {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes runCardsRight {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
 }
 
 @keyframes cardInfoAnimation {
@@ -174,8 +151,11 @@
   .popular-characters_running-cards_content {
     gap: 17px;
   }
+  .popular-characters_running-cards_content {
+    margin-right: 17px;
+  }
   .popular-characters_running-cards_item {
-    min-width: 180px;
+    width: 180px;
     height: 240px;
   }
   .popular-characters_running-cards_item_description {
@@ -226,7 +206,7 @@
     margin-top: 30px;
   }
   .popular-characters_running-cards_item {
-    min-width: 124px;
+    width: 124px;
     height: 165px;
   }
   .popular-characters_running-cards_item_description {

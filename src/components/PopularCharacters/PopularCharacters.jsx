@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import Marquee from "react-fast-marquee";
+
 import "./PopularCharacters.css";
 
 import link_img from "../../assets/LinkImg";
@@ -191,25 +192,6 @@ const cardsBottom = [
 ];
 
 export const PopularCharacters = () => {
-  const [cards, setCards] = useState([...cardsTop]);
-  const [isHovered, setIsHovered] = useState(false);
-  const [visibleCards, setVisibleCards] = useState([]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (!isHovered) {
-        setCards((prevCards) => {
-          const lastCard = prevCards.pop();
-          prevCards.unshift(lastCard);
-          setVisibleCards(prevCards.slice(0, visibleCards.length));
-          return [...prevCards, ...visibleCards];
-        });
-      }
-    }, 30000);
-
-    return () => clearInterval(interval);
-  }, [isHovered, visibleCards]);
-
   return (
     <div
       className="popular-characters"
@@ -231,52 +213,52 @@ export const PopularCharacters = () => {
           <OrangeButton>Watch all</OrangeButton>
         </div>
         <div className="popular-characters_running-cards">
-          <div
-            className="popular-characters_running-cards_content"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            {cards.map((item, index) => (
-              <div
-                className="popular-characters_running-cards_item"
-                key={index}
-              >
-                <img src={item.img} alt={item.name} />
-                <div className="popular-characters_running-cards_item_description">
-                  <h3 className="popular-characters_running-cards_item_description-name">
-                    {item.name}
-                  </h3>
-                  <div className="popular-characters_running-cards_item_description-ability">
-                    <img src={item.icon} alt={item.ability} />
-                    <p className="popular-characters_running-cards_item_description-ability_name">
-                      {item.ability}
-                    </p>
+          <Marquee pauseOnHover={true} direction="left" speed={30}>
+            <div className="popular-characters_running-cards_content">
+              {cardsTop.map((item, index) => (
+                <div
+                  className="popular-characters_running-cards_item"
+                  key={index}
+                >
+                  <img src={item.img} alt={item.name} />
+                  <div className="popular-characters_running-cards_item_description">
+                    <h3 className="popular-characters_running-cards_item_description-name">
+                      {item.name}
+                    </h3>
+                    <div className="popular-characters_running-cards_item_description-ability">
+                      <img src={item.icon} alt={item.ability} />
+                      <p className="popular-characters_running-cards_item_description-ability_name">
+                        {item.ability}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-          <div className="popular-characters_running-cards_content">
-            {cardsBottom.map((item, index) => (
-              <div
-                className="popular-characters_running-cards_item"
-                key={index}
-              >
-                <img src={item.img} alt={item.name} />
-                <div className="popular-characters_running-cards_item_description">
-                  <h3 className="popular-characters_running-cards_item_description-name">
-                    {item.name}
-                  </h3>
-                  <div className="popular-characters_running-cards_item_description-ability">
-                    <img src={item.icon} alt={item.ability} />
-                    <p className="popular-characters_running-cards_item_description-ability_name">
-                      {item.ability}
-                    </p>
+              ))}
+            </div>
+          </Marquee>
+          <Marquee pauseOnHover={true} direction="right" speed={30}>
+            <div className="popular-characters_running-cards_content">
+              {cardsBottom.map((item, index) => (
+                <div
+                  className="popular-characters_running-cards_item"
+                  key={index}
+                >
+                  <img src={item.img} alt={item.name} />
+                  <div className="popular-characters_running-cards_item_description">
+                    <h3 className="popular-characters_running-cards_item_description-name">
+                      {item.name}
+                    </h3>
+                    <div className="popular-characters_running-cards_item_description-ability">
+                      <img src={item.icon} alt={item.ability} />
+                      <p className="popular-characters_running-cards_item_description-ability_name">
+                        {item.ability}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </Marquee>
         </div>
       </div>
     </div>
