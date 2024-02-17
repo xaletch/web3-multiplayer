@@ -188,7 +188,7 @@
 }
 /* МОБИЛЬНОЕ МЕНЮ С ОПИСАНИЕМ */
 .description-characters_menu {
-  height: 110%;
+  height: 100%;
   background: var(--bg-page);
   position: absolute;
   top: 0;
@@ -314,7 +314,7 @@
     top: 100px;
   }
   .description-characters_hero-img_2 {
-    top: 202px;
+    top: 176px;
   }
   .description-characters_hero-img_3 {
     left: 150px;
@@ -363,7 +363,7 @@
     left: 150px;
   }
   .description-characters_hero-img_2 {
-    top: 287px;
+    top: 261px;
   }
   .description-characters_hero-img_3 {
     left: 150px;
@@ -404,7 +404,7 @@
     left: 100px;
   }
   .description-characters_hero-img_2 {
-    top: 88px;
+    top: 62px;
   }
   .description-characters_hero-img_3 {
     left: 100px;
@@ -422,16 +422,6 @@
     line-height: 26px;
   }
 }
-@media screen and (max-width: 604px) {
-  .description-characters_hero-img_2 {
-    top: 121px;
-  }
-}
-@media screen and (max-width: 573px) {
-  .description-characters_hero-img_2 {
-    top: 136px;
-  }
-}
 @media screen and (max-width: 560px) {
   .description-characters_hero {
     width: 400px;
@@ -440,9 +430,6 @@
   .description-characters_hero-img_1 {
     width: 400px;
     left: 70px;
-  }
-  .description-characters_hero-img_2 {
-    top: 136px;
   }
   .description-characters_hero-img_3 {
     left: 70px;
@@ -460,7 +447,7 @@
     height: 640px;
   }
   .description-characters_content-inner {
-    padding-top: 490px;
+    padding-top: 400px;
   }
   .description-characters_hero {
     width: 310px;
@@ -471,7 +458,7 @@
     left: 40px;
   }
   .description-characters_hero-img_2 {
-    top: 188px;
+    top: 114px;
   }
   .description-characters_hero-img_3 {
     top: 140px;
@@ -498,17 +485,9 @@
     width: 330px;
     left: 10px;
   }
-  .description-characters_hero-img_2 {
-    top: 188px;
-  }
   .description-characters_hero-img_3 {
     width: 360px;
     top: 170px;
     left: 10px;
-  }
-}
-@media screen and (max-width: 377px) {
-  .description-characters_hero-img_2 {
-    top: 203px;
   }
 }

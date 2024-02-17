@@ -48,6 +48,9 @@
   }
 }
 @media screen and (max-width: 780px) {
+  .hero {
+    min-height: 100vh;
+  }
   .hero_content {
     padding: 0 16px;
     gap: 16px;
@@ -81,5 +84,11 @@
   }
   .hero_content-description {
     width: 100%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .hero {
+    background-image: url("../../assets/images/heroBgMobile.png");
+    background-size: cover;
   }
 }
