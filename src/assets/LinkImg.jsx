@@ -2,12 +2,12 @@ import logo from "./icons/logo.svg";
 import lang from "./icons/united-states-of-america.jpg";
 
 // КАРТИНКИ ДЛЯ ОПИСАНИЯ ИГРЫ
-import aboutImg1 from "./images/about img 1.jpg";
-import aboutImg2 from "./images/about img 2.jpg";
+import aboutImg1 from "./images/about img 1.png";
+import aboutImg2 from "./images/about img 2.png";
 import aboutImg3 from "./images/about img 3.jpeg";
 import aboutImg4 from "./images/about img 4.jpg";
-import aboutImg5 from "./images/about img 5.jpg";
-import aboutImg6 from "./images/about img 6.jpg";
+import aboutImg5 from "./images/about img 5.png";
+import aboutImg6 from "./images/about img 6.png";
 
 // КАРТИНКИ ДЛЯ ОПИСАНИЯ БОЙЦОВ
 import gorgomath from "./images/gorgomath.png";

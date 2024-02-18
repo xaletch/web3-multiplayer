@@ -19,9 +19,13 @@
   width: 485px;
   max-height: 300px;
   min-height: 200px;
+  height: 100%;
   border-radius: 8px;
   object-fit: cover;
   object-position: left top;
+}
+.center-img {
+  object-position: center;
 }
 .about-game_item-title {
   margin-top: 60px;

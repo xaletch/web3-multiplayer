@@ -52,7 +52,13 @@ export const AboutGame = () => {
             {aboutGame.map((item, index) => (
               <div className="about-game_item" key={index}>
                 {item.img && (
-                  <img className="about-game_item-img" src={item.img} alt="" />
+                  <img
+                    className={`about-game_item-img ${
+                      index === 2 ? "center-img" : ""
+                    }`}
+                    src={item.img}
+                    alt=""
+                  />
                 )}
                 {item.name && (
                   <h3 className="about-game_item-title">{item.name}</h3>
