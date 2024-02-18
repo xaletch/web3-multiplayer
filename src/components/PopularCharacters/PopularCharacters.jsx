@@ -220,7 +220,11 @@ export const PopularCharacters = () => {
                   className="popular-characters_running-cards_item"
                   key={index}
                 >
-                  <img src={item.img} alt={item.name} />
+                  <img
+                    className="popular-characters_running-cards_item-img"
+                    src={item.img}
+                    alt={item.name}
+                  />
                   <div className="popular-characters_running-cards_item_description">
                     <h3 className="popular-characters_running-cards_item_description-name">
                       {item.name}
@@ -243,7 +247,11 @@ export const PopularCharacters = () => {
                   className="popular-characters_running-cards_item"
                   key={index}
                 >
-                  <img src={item.img} alt={item.name} />
+                  <img
+                    className="popular-characters_running-cards_item-img"
+                    src={item.img}
+                    alt={item.name}
+                  />
                   <div className="popular-characters_running-cards_item_description">
                     <h3 className="popular-characters_running-cards_item_description-name">
                       {item.name}

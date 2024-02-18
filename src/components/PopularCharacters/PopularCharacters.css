@@ -50,6 +50,7 @@
   position: relative;
   overflow: hidden;
   transition: border-color 0.3s ease-in-out;
+  transition: transform 0.3s ease;
 }
 .popular-characters_running-cards_item::before {
   content: "";
@@ -62,10 +63,19 @@
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
+.popular-characters_running-cards_item-img {
+  transition: transform 0.3s ease;
+}
 
 .popular-characters_running-cards_item:hover {
+  transform: scale(1.2);
+}
+
+.rfm-marquee-container {
+  overflow: visible !important;
+}
+.popular-characters_running-cards_item:hover {
   border-color: var(--orange-color);
-  animation-play-state: paused;
 }
 .popular-characters_running-cards_item:hover
   .popular-characters_running-cards_item_description {
@@ -170,6 +180,9 @@
   }
   .popular-characters_running-cards_item_description-ability_name {
     font-size: 14px;
+  }
+  .popular-characters_running-cards_item:hover {
+    transform: scale(1.1);
   }
 }
 @media screen and (max-width: 780px) {

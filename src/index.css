@@ -1,6 +1,6 @@
 :root {
-  --container: 1528px;
-  --padding-container: 16px;
+  --container: 1520px;
+  --padding-container: 20px;
   --container-width: calc(
     var(var(--container) + (var(var(--padding-container) * 2)))
   );
@@ -137,4 +137,11 @@ textarea {
   min-width: 310px;
   padding: 0 var(--padding-container);
   margin: 0 auto;
+}
+
+/* АДАПТИВ */
+@media screen and (max-width: 1660px) {
+  .container {
+    max-width: 1280px;
+  }
 }

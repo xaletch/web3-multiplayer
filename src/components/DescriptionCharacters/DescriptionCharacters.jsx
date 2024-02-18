@@ -87,6 +87,8 @@ export const DescriptionCharacters = () => {
             className={`description-characters_hero ${
               currentIndex == 0
                 ? "description-characters_hero-img_1"
+                : "" || currentIndex == 1
+                ? "description-characters_hero-img_2-2"
                 : "" || currentIndex == 3
                 ? "description-characters_hero-img_3"
                 : "" || currentIndex == 2
