@@ -38,6 +38,67 @@ import ruggedFigureResembling from "./images/Toxic_Skin,_a_rugged_figure_resembl
 import venomBite from "./images/Venom_Bite_The_Toxic_Avenger,_is_now.png";
 import romanGodLike from "./images/War_Deity_reimagined_as_a_Roman_god_like.png";
 import emberWarrior from "./images/Wild_Fire_The_Ember_Warrior_now_has.png";
+import Roach from "./images/Roach.png";
+import TerrorSurgeon from "./images/TerrorSurgeon.png";
+import Phantasm from "./images/Phantasm.png";
+import BlastForge from "./images/BlastForge.png";
+import Mechanix from "./images/Mechanix.png";
+import IceBreaker from "./images/IceBreaker.png";
+import DeathWraith from "./images/DeathWraith.png";
+import VoodooShaman from "./images/VoodooShaman.png";
+import Cyclope from "./images/Cyclope.png";
+import Dyno from "./images/Dyno.png";
+import DarkJester from "./images/DarkJester.png";
+import KingMonk from "./images/KingMonk.png";
+import ShadowLurker from "./images/ShadowLurker.png";
+import Dreamweaver from "./images/Dreamweaver.png";
+import Voidscorn from "./images/Voidscorn.png";
+import BloodLord from "./images/BloodLord.png";
+import TrickLord from "./images/TrickLord.png";
+import TideForm from "./images/TideForm.png";
+import GreenWard from "./images/GreenWard.png";
+import PlagueShadow from "./images/PlagueShadow.png";
+import SwiftBlade from "./images/SwiftBlade.png";
+import ShadowKill from "./images/ShadowKill.png";
+import MirageBlade from "./images/MirageBlade.png";
+import SolFlare from "./images/SolFlare.png";
+import NetherSoul from "./images/NetherSoul.png";
+import SpellCraft from "./images/SpellCraft.png";
+import DuneSlayer from "./images/DuneSlayer.png";
+import FrostMark from "./images/FrostMark.png";
+import TerraShift from "./images/TerraShift.png";
+import QuakeFist from "./images/QuakeFist.png";
+import VoidReign from "./images/VoidReign.png";
+import SlickShot from "./images/SlickShot.png";
+import BladeStorm from "./images/BladeStorm.jpeg";
+import TideBlade from "./images/TideBlade.png";
+import NatureBin from "./images/NatureBin.png";
+import WildKin from "./images/WildKin.png";
+import CrimsonHound from "./images/CrimsonHound.png";
+import TreasureSeek from "./images/TreasureSeek.png";
+import QuillBrute from "./images/QuillBrute.png";
+import WebQueen from "./images/WebQueen.png";
+import DarkRider from "./images/DarkRider.png";
+import SkyGlider from "./images/SkyGlider.png";
+import GearHart from "./images/GearHart.png";
+import FrostBelle from "./images/FrostBelle.png";
+import AbyssFiend from "./images/AbyssFiend.png";
+import ShadowMyst from "./images/ShadowMyst.png";
+import StarHammer from "./images/StarHammer.png";
+import HexSinger from "./images/HexSinger.png";
+import StormWield from "./images/StormWield.png";
+import NightShade from "./images/NightShade.png";
+import SpellBane from "./images/SpellBane.png";
+import SparkGuard from "./images/SparkGuard.png";
+import DreamFiend from "./images/DreamFiend.png";
+import FearAura from "./images/FearAura.png";
+import SilenceStrike from "./images/SilenceStrike.png";
+import ShadowPoison from "./images/ShadowPoison.jpeg";
+import Zathor from "./images/Zathor.png";
+import Dreadfang from "./images/Dreadfang.png";
+import Sylvanthea2 from "./images/Sylvanthea2.png";
+import AbyssalAberration from "./images/AbyssalAberration.png";
+import Verminathrax from "./images/Verminathrax.png";
 
 // ИКОНКИ ПЕРСОНАЖЕЙ
 import iconArcher from "./icons/iconArcher.svg";
@@ -87,6 +148,67 @@ const link_img = {
   hoveVideoImg: hoveVideoImg,
   homeVideo: homeVideo,
   subscribe: subscribe,
+  Roach: Roach,
+  TerrorSurgeon: TerrorSurgeon,
+  Phantasm: Phantasm,
+  BlastForge: BlastForge,
+  Mechanix: Mechanix,
+  IceBreaker: IceBreaker,
+  DeathWraith: DeathWraith,
+  VoodooShaman: VoodooShaman,
+  Cyclope: Cyclope,
+  Dyno: Dyno,
+  DarkJester: DarkJester,
+  KingMonk: KingMonk,
+  ShadowLurker: ShadowLurker,
+  Dreamweaver: Dreamweaver,
+  Voidscorn: Voidscorn,
+  BloodLord: BloodLord,
+  TrickLord: TrickLord,
+  TideForm: TideForm,
+  GreenWard: GreenWard,
+  PlagueShadow: PlagueShadow,
+  SwiftBlade: SwiftBlade,
+  ShadowKill: ShadowKill,
+  MirageBlade: MirageBlade,
+  SolFlare: SolFlare,
+  NetherSoul: NetherSoul,
+  SpellCraft: SpellCraft,
+  DuneSlayer: DuneSlayer,
+  FrostMark: FrostMark,
+  TerraShift: TerraShift,
+  QuakeFist: QuakeFist,
+  VoidReign: VoidReign,
+  SlickShot: SlickShot,
+  BladeStorm: BladeStorm,
+  TideBlade: TideBlade,
+  NatureBin: NatureBin,
+  WildKin: WildKin,
+  CrimsonHound: CrimsonHound,
+  TreasureSeek: TreasureSeek,
+  QuillBrute: QuillBrute,
+  WebQueen: WebQueen,
+  DarkRider: DarkRider,
+  SkyGlider: SkyGlider,
+  GearHart: GearHart,
+  FrostBelle: FrostBelle,
+  AbyssFiend: AbyssFiend,
+  ShadowMyst: ShadowMyst,
+  StarHammer: StarHammer,
+  HexSinger: HexSinger,
+  StormWield: StormWield,
+  NightShade: NightShade,
+  SpellBane: SpellBane,
+  SparkGuard: SparkGuard,
+  DreamFiend: DreamFiend,
+  FearAura: FearAura,
+  SilenceStrike: SilenceStrike,
+  ShadowPoison: ShadowPoison,
+  Zathor: Zathor,
+  Dreadfang: Dreadfang,
+  Sylvanthea2: Sylvanthea2,
+  AbyssalAberration: AbyssalAberration,
+  Verminathrax: Verminathrax,
 };
 
 export default link_img;
