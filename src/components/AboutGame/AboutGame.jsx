@@ -71,9 +71,7 @@ export const AboutGame = () => {
               </div>
             ))}
           </div>
-          <OrangeButton index={"about-game_button"}>
-            Connect Wallet
-          </OrangeButton>
+          <OrangeButton index={"about-game_button"}>Watch more</OrangeButton>
         </div>
       </div>
     </div>

@@ -109,8 +109,16 @@
 .description-characters_line-bottom {
   right: 361px;
   bottom: 58px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 22px;
 }
-
+.description-characters_line-bottom_doth {
+  width: 6px;
+  height: 6px;
+  border-radius: 50px;
+  background: var(--orange-color);
+}
 /* АНИМАЦИЯ ДЛЯ ПОЯВЛЕНИЯ СЛАЙДОВ */
 .slide-anim-bg {
   animation: slideAnimationBg 0.5s ease;
@@ -506,8 +514,8 @@
     top: 114px;
   }
   .description-characters_hero-img_3 {
-    top: 140px;
-    left: 40px;
+    top: 110px;
+    left: 20px;
     width: 400px;
   }
   .description-characters_description-name {
@@ -533,7 +541,7 @@
   .description-characters_hero-img_3 {
     width: 360px;
     top: 170px;
-    left: 10px;
+    left: 0px;
   }
 }
 @media screen and (max-width: 340px) {

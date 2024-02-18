@@ -80,16 +80,14 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .hero {
+    background-image: url("../../assets/images/heroBgMobile.png");
+    background-size: cover;
+  }
   .hero_content-title {
     width: 100%;
   }
   .hero_content-description {
     width: 100%;
-  }
-}
-@media screen and (max-width: 390px) {
-  .hero {
-    background-image: url("../../assets/images/heroBgMobile.png");
-    background-size: cover;
   }
 }

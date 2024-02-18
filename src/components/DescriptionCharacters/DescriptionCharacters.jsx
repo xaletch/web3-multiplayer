@@ -204,36 +204,152 @@ export const DescriptionCharacters = () => {
             </div>
           </div>
         </div>
-        <svg
-          className="description-characters_line-bottom"
-          width="6"
-          height="238"
-          viewBox="0 0 6 238"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M6 3C6 4.65685 4.65685 6 3 6C1.34315 6 0 4.65685 0 3C0 1.34315 1.34315 0 3 0C4.65685 0 6 1.34315 6 3ZM6 32C6 33.6569 4.65685 35 3 35C1.34315 35 0 33.6569 0 32C0 30.3431 1.34315 29 3 29C4.65685 29 6 30.3431 6 32ZM3 64C4.65685 64 6 62.6569 6 61C6 59.3431 4.65685 58 3 58C1.34315 58 0 59.3431 0 61C0 62.6569 1.34315 64 3 64ZM6 90C6 91.6569 4.65685 93 3 93C1.34315 93 0 91.6569 0 90C0 88.3431 1.34315 87 3 87C4.65685 87 6 88.3431 6 90ZM3 122C4.65685 122 6 120.657 6 119C6 117.343 4.65685 116 3 116C1.34315 116 0 117.343 0 119C0 120.657 1.34315 122 3 122ZM6 148C6 149.657 4.65685 151 3 151C1.34315 151 0 149.657 0 148C0 146.343 1.34315 145 3 145C4.65685 145 6 146.343 6 148ZM3 180C4.65685 180 6 178.657 6 177C6 175.343 4.65685 174 3 174C1.34315 174 0 175.343 0 177C0 178.657 1.34315 180 3 180ZM6 206C6 207.657 4.65685 209 3 209C1.34315 209 0 207.657 0 206C0 204.343 1.34315 203 3 203C4.65685 203 6 204.343 6 206ZM3 238C4.65685 238 6 236.657 6 235C6 233.343 4.65685 232 3 232C1.34315 232 0 233.343 0 235C0 236.657 1.34315 238 3 238Z"
-            fill="url(#paint0_linear_38_543)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_38_543"
-              x1="-24"
-              y1="198"
-              x2="-24"
-              y2="27"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#FF5C00" />
-              <stop offset="1" stopColor="white" stopOpacity="0" />
-              <stop offset="1" stopColor="#FF5C00" stopOpacity="0.35" />
-            </linearGradient>
-          </defs>
-        </svg>
-
+        <div className="description-characters_line-bottom">
+          <div
+            className="description-characters_line-bottom_doth"
+            style={
+              currentIndex === 0
+                ? { opacity: "1" }
+                : "" | (currentIndex === 1)
+                ? { opacity: "1" }
+                : "" | (currentIndex === 2)
+                ? { opacity: "1" }
+                : "" | (currentIndex === 3)
+                ? { opacity: "1" }
+                : "" | (currentIndex === 4)
+                ? { opacity: "1" }
+                : ""
+            }
+          ></div>
+          <div
+            className="description-characters_line-bottom_doth"
+            style={
+              currentIndex === 0
+                ? { opacity: "0.9" }
+                : "" | (currentIndex === 1)
+                ? { opacity: "1" }
+                : "" | (currentIndex === 2)
+                ? { opacity: "1" }
+                : "" | (currentIndex === 3)
+                ? { opacity: "1" }
+                : "" | (currentIndex === 4)
+                ? { opacity: "1" }
+                : ""
+            }
+          ></div>
+          <div
+            className="description-characters_line-bottom_doth"
+            style={
+              currentIndex === 0
+                ? { opacity: "0.8" }
+                : "" | (currentIndex === 1)
+                ? { opacity: "1" }
+                : "" | (currentIndex === 2)
+                ? { opacity: "1" }
+                : "" | (currentIndex === 3)
+                ? { opacity: "1" }
+                : "" | (currentIndex === 4)
+                ? { opacity: "1" }
+                : ""
+            }
+          ></div>
+          <div
+            className="description-characters_line-bottom_doth"
+            style={
+              currentIndex === 0
+                ? { opacity: "0.6" }
+                : "" | (currentIndex === 1)
+                ? { opacity: "0.7" }
+                : "" | (currentIndex === 2)
+                ? { opacity: "0.9" }
+                : "" | (currentIndex === 3)
+                ? { opacity: "1" }
+                : "" | (currentIndex === 4)
+                ? { opacity: "1" }
+                : ""
+            }
+          ></div>
+          <div
+            className="description-characters_line-bottom_doth"
+            style={
+              currentIndex === 0
+                ? { opacity: "0.5" }
+                : "" | (currentIndex === 1)
+                ? { opacity: "0.6" }
+                : "" | (currentIndex === 2)
+                ? { opacity: "" }
+                : "" | (currentIndex === 3)
+                ? { opacity: "" }
+                : "" | (currentIndex === 4)
+                ? { opacity: "" }
+                : ""
+            }
+          ></div>
+          <div
+            className="description-characters_line-bottom_doth"
+            style={
+              currentIndex === 0
+                ? { opacity: "0.4" }
+                : "" | (currentIndex === 1)
+                ? { opacity: "0.4" }
+                : "" | (currentIndex === 2)
+                ? { opacity: "0.5" }
+                : "" | (currentIndex === 3)
+                ? { opacity: "0.8" }
+                : "" | (currentIndex === 4)
+                ? { opacity: "" }
+                : ""
+            }
+          ></div>
+          <div
+            className="description-characters_line-bottom_doth"
+            style={
+              currentIndex === 0
+                ? { opacity: "0.3" }
+                : "" | (currentIndex === 1)
+                ? { opacity: "0.3" }
+                : "" | (currentIndex === 2)
+                ? { opacity: "0.4" }
+                : "" | (currentIndex === 3)
+                ? { opacity: "0.6" }
+                : "" | (currentIndex === 4)
+                ? { opacity: "0.9" }
+                : ""
+            }
+          ></div>
+          <div
+            className="description-characters_line-bottom_doth"
+            style={
+              currentIndex === 0
+                ? { opacity: "0.2" }
+                : "" | (currentIndex === 1)
+                ? { opacity: "0.2" }
+                : "" | (currentIndex === 2)
+                ? { opacity: "0.4" }
+                : "" | (currentIndex === 3)
+                ? { opacity: "0.6" }
+                : "" | (currentIndex === 4)
+                ? { opacity: "1" }
+                : ""
+            }
+          ></div>
+          <div
+            className="description-characters_line-bottom_doth"
+            style={
+              currentIndex === 0
+                ? { opacity: "0.1" }
+                : "" | (currentIndex === 1)
+                ? { opacity: "0.1" }
+                : "" | (currentIndex === 2)
+                ? { opacity: "0.2" }
+                : "" | (currentIndex === 3)
+                ? { opacity: "0.4" }
+                : "" | (currentIndex === 4)
+                ? { opacity: "0.8" }
+                : ""
+            }
+          ></div>
+        </div>
         <svg
           className="description-characters_line-top"
           width="11"
