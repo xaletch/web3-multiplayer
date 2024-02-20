@@ -1,4 +1,12 @@
 import { useState } from "react";
+
+// animation
+import { motion } from "framer-motion";
+import {
+  descriptionCharactersAnimation,
+  descriptionCharactersTextAnimation,
+} from "../../animation/animationConfig";
+
 import link_img from "../../assets/LinkImg";
 import "./DescriptionCharacters.css";
 
@@ -71,7 +79,11 @@ export const DescriptionCharacters = () => {
   };
 
   return (
-    <div className="description-characters">
+    <motion.div
+      className="description-characters"
+      initial={"hidden"}
+      whileInView={"visible"}
+    >
       <div
         className={`description-characters_wrapper ${
           isAnimating ? "slide-anim-bg" : ""
@@ -83,7 +95,11 @@ export const DescriptionCharacters = () => {
         }}
       >
         <div className="description-characters_content">
-          <img
+          <motion.img
+            initial={"hidden"}
+            whileInView={"visible"}
+            viewport={{ amount: 0.2, once: true }}
+            variants={descriptionCharactersAnimation}
             className={`description-characters_hero ${
               currentIndex == 0
                 ? "description-characters_hero-img_1"
@@ -99,23 +115,40 @@ export const DescriptionCharacters = () => {
             alt={heroItems[currentIndex].name}
           />
           <div className="description-characters_content-inner">
-            <div
+            <motion.div
               className={`description-characters_description ${
                 isAnimating ? "slide-anim-content" : ""
               }`}
+              initial={"hidden"}
+              whileInView={"visible"}
+              viewport={{ amount: 0.2, once: true }}
             >
-              <h2 className="description-characters_description-name">
+              <motion.h2
+                className="description-characters_description-name"
+                variants={descriptionCharactersTextAnimation}
+                custom={1}
+              >
                 {heroItems[currentIndex].name}
-              </h2>
-              <span className="description-characters_description-ability">
+              </motion.h2>
+              <motion.span
+                className="description-characters_description-ability"
+                variants={descriptionCharactersTextAnimation}
+                custom={2}
+              >
                 {heroItems[currentIndex].ability}
-              </span>
-              <p className="description-characters_description-text">
+              </motion.span>
+              <motion.p
+                className="description-characters_description-text"
+                variants={descriptionCharactersTextAnimation}
+                custom={3}
+              >
                 {heroItems[currentIndex].description}
-              </p>
-              <button
+              </motion.p>
+              <motion.button
                 className="description-characters_description-more"
                 onClick={() => setOpenMenu(!isOpenMenu)}
+                variants={descriptionCharactersTextAnimation}
+                custom={3}
               >
                 more detailed
                 <span>
@@ -132,9 +165,13 @@ export const DescriptionCharacters = () => {
                     />
                   </svg>
                 </span>
-              </button>
-            </div>
-            <div className="description-characters_buttons">
+              </motion.button>
+            </motion.div>
+            <motion.div
+              className="description-characters_buttons"
+              variants={descriptionCharactersTextAnimation}
+              custom={4}
+            >
               <button
                 onClick={handlePrevClick}
                 className="description-characters_buttons-prev description-characters_btn"
@@ -201,153 +238,34 @@ export const DescriptionCharacters = () => {
                   </svg>
                 )}
               </button>
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="description-characters_line-bottom">
           <div
-            className="description-characters_line-bottom_doth"
-            style={
-              currentIndex === 0
-                ? { opacity: "1" }
-                : "" | (currentIndex === 1)
-                ? { opacity: "1" }
-                : "" | (currentIndex === 2)
-                ? { opacity: "1" }
-                : "" | (currentIndex === 3)
-                ? { opacity: "1" }
-                : "" | (currentIndex === 4)
-                ? { opacity: "1" }
-                : ""
-            }
+            className={`description-characters_line-bottom_doth ${
+              currentIndex === 0 ? "active" : ""
+            }`}
           ></div>
           <div
-            className="description-characters_line-bottom_doth"
-            style={
-              currentIndex === 0
-                ? { opacity: "0.9" }
-                : "" | (currentIndex === 1)
-                ? { opacity: "1" }
-                : "" | (currentIndex === 2)
-                ? { opacity: "1" }
-                : "" | (currentIndex === 3)
-                ? { opacity: "1" }
-                : "" | (currentIndex === 4)
-                ? { opacity: "1" }
-                : ""
-            }
+            className={`description-characters_line-bottom_doth ${
+              currentIndex === 1 ? "active" : ""
+            }`}
           ></div>
           <div
-            className="description-characters_line-bottom_doth"
-            style={
-              currentIndex === 0
-                ? { opacity: "0.8" }
-                : "" | (currentIndex === 1)
-                ? { opacity: "1" }
-                : "" | (currentIndex === 2)
-                ? { opacity: "1" }
-                : "" | (currentIndex === 3)
-                ? { opacity: "1" }
-                : "" | (currentIndex === 4)
-                ? { opacity: "1" }
-                : ""
-            }
+            className={`description-characters_line-bottom_doth ${
+              currentIndex === 2 ? "active" : ""
+            }`}
           ></div>
           <div
-            className="description-characters_line-bottom_doth"
-            style={
-              currentIndex === 0
-                ? { opacity: "0.6" }
-                : "" | (currentIndex === 1)
-                ? { opacity: "0.7" }
-                : "" | (currentIndex === 2)
-                ? { opacity: "0.9" }
-                : "" | (currentIndex === 3)
-                ? { opacity: "1" }
-                : "" | (currentIndex === 4)
-                ? { opacity: "1" }
-                : ""
-            }
+            className={`description-characters_line-bottom_doth ${
+              currentIndex === 3 ? "active" : ""
+            }`}
           ></div>
           <div
-            className="description-characters_line-bottom_doth"
-            style={
-              currentIndex === 0
-                ? { opacity: "0.5" }
-                : "" | (currentIndex === 1)
-                ? { opacity: "0.6" }
-                : "" | (currentIndex === 2)
-                ? { opacity: "" }
-                : "" | (currentIndex === 3)
-                ? { opacity: "" }
-                : "" | (currentIndex === 4)
-                ? { opacity: "" }
-                : ""
-            }
-          ></div>
-          <div
-            className="description-characters_line-bottom_doth"
-            style={
-              currentIndex === 0
-                ? { opacity: "0.4" }
-                : "" | (currentIndex === 1)
-                ? { opacity: "0.4" }
-                : "" | (currentIndex === 2)
-                ? { opacity: "0.5" }
-                : "" | (currentIndex === 3)
-                ? { opacity: "0.8" }
-                : "" | (currentIndex === 4)
-                ? { opacity: "" }
-                : ""
-            }
-          ></div>
-          <div
-            className="description-characters_line-bottom_doth"
-            style={
-              currentIndex === 0
-                ? { opacity: "0.3" }
-                : "" | (currentIndex === 1)
-                ? { opacity: "0.3" }
-                : "" | (currentIndex === 2)
-                ? { opacity: "0.4" }
-                : "" | (currentIndex === 3)
-                ? { opacity: "0.6" }
-                : "" | (currentIndex === 4)
-                ? { opacity: "0.9" }
-                : ""
-            }
-          ></div>
-          <div
-            className="description-characters_line-bottom_doth"
-            style={
-              currentIndex === 0
-                ? { opacity: "0.2" }
-                : "" | (currentIndex === 1)
-                ? { opacity: "0.2" }
-                : "" | (currentIndex === 2)
-                ? { opacity: "0.4" }
-                : "" | (currentIndex === 3)
-                ? { opacity: "0.6" }
-                : "" | (currentIndex === 4)
-                ? { opacity: "1" }
-                : ""
-            }
-          ></div>
-          <div
-            className="description-characters_line-bottom_doth"
-            style={
-              currentIndex === 0
-                ? { opacity: "0.1" }
-                : "" | (currentIndex === 1)
-                ? { opacity: "0.1" }
-                : "" | (currentIndex === 2)
-                ? { opacity: "0.2" }
-                : "" | (currentIndex === 3)
-                ? { opacity: "0.4" }
-                : "" | (currentIndex === 4)
-                ? { opacity: "0.8" }
-                : ""
-            }
+            className={`description-characters_line-bottom_doth ${
+              currentIndex === 4 ? "active" : ""
+            }`}
           ></div>
         </div>
         <svg
@@ -451,6 +369,6 @@ export const DescriptionCharacters = () => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

@@ -1,8 +1,18 @@
 import "./orangeButton.css";
 
+// animation
+import { motion } from "framer-motion";
+import { buttonAnimation } from "../../../animation/animationConfig";
+
 export const OrangeButton = ({ children, index }) => {
   return (
-    <button className={`orange-btn ${index}`}>
+    <motion.button
+      className={`orange-btn ${index}`}
+      initial={"hidden"}
+      whileInView={"visible"}
+      viewport={{ once: true }}
+      variants={buttonAnimation}
+    >
       <svg
         width="218"
         height="49"
@@ -16,6 +26,6 @@ export const OrangeButton = ({ children, index }) => {
         />
       </svg>
       {children}
-    </button>
+    </motion.button>
   );
 };

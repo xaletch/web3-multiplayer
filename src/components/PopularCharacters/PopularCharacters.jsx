@@ -3,6 +3,10 @@ import Marquee from "react-fast-marquee";
 import "./PopularCharacters.css";
 import { cardsTop, cardsBottom } from "./PopularCardsData";
 
+// animation
+import { motion } from "framer-motion";
+import { textAnimation } from "../../animation/animationConfig";
+
 import link_img from "../../assets/LinkImg";
 
 import { OrangeButton } from "../Buttons/OrangeButton/OrangeButton";
@@ -18,16 +22,29 @@ export const PopularCharacters = () => {
       }}
     >
       <div className="popular-characters_wrapper">
-        <div className="popular-characters_description">
-          <h2 className="popular-characters_description-name">
+        <motion.div
+          className="popular-characters_description"
+          initial={"hidden"}
+          whileInView={"visible"}
+          viewport={{ amount: 0.2, once: true }}
+        >
+          <motion.h2
+            className="popular-characters_description-name"
+            variants={textAnimation}
+            custom={1}
+          >
             Top most popular characters
-          </h2>
-          <p className="popular-characters_description-text">
+          </motion.h2>
+          <motion.p
+            className="popular-characters_description-text"
+            variants={textAnimation}
+            custom={2}
+          >
             Find a hero that suits your fighting style!Find out information
             about the heroes and go ahead to victory!
-          </p>
+          </motion.p>
           <OrangeButton>Watch all</OrangeButton>
-        </div>
+        </motion.div>
         <div className="popular-characters_running-cards">
           <Marquee pauseOnHover={true} direction="left" speed={30}>
             <div className="popular-characters_running-cards_content">

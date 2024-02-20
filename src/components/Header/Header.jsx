@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from "react";
+
+// animation
+import { motion } from "framer-motion";
+import { headerAnimation } from "../../animation/animationConfig";
+
 import { Link } from "react-router-dom";
 import link_img from "../../assets/LinkImg";
 
@@ -29,7 +34,12 @@ export const Header = () => {
     }
   }, [isOpenMenu]);
   return (
-    <div className="header">
+    <motion.div
+      initial={"hidden"}
+      whileInView={"visible"}
+      variants={headerAnimation}
+      className="header"
+    >
       <svg
         className="header_bg"
         width="1655"
@@ -72,8 +82,9 @@ export const Header = () => {
           stroke="white"
         />
       </svg>
-      <div
+      <motion.div
         className={`header_wrapper ${isOpenMenu ? "header_wrapper-open" : ""}`}
+        variants={headerAnimation}
       >
         <div className="header_l-content">
           <Link to="/">
@@ -181,7 +192,7 @@ export const Header = () => {
           </button>
           <OrangeButton index="header_orange-btn">Connect Wallet</OrangeButton>
         </div>
-      </div>
+      </motion.div>
 
       <div className={`header_menu ${isOpenMenu ? "header_menu-open" : ""}`}>
         <div className="header_menu-wrapper">
@@ -275,6 +286,6 @@ export const Header = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
