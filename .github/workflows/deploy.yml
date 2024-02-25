@@ -22,6 +22,6 @@ jobs:
         with:
           REMOTE_HOST: 188.120.235.169
           REMOTE_USER: root
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
           SOURCE: dist
           TARGET: /var/www/www-root/data/www/georgedotgame.fvds.ru
