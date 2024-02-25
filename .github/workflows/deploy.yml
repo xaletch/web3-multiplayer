@@ -20,8 +20,8 @@ jobs:
       - name: Deploy to Hosting
         uses: easingthemes/ssh-deploy@v2
         with:
-          REMOTE_HOST: 188.120.235.169
-          REMOTE_USER: root
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
           SSH_PRIVATE_KEY: ${{ secrets.KEY }}
           SOURCE: dist
           TARGET: /var/www/www-root/data/www/georgedotgame.fvds.ru
