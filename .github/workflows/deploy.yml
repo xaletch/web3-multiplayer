@@ -20,8 +20,8 @@ jobs:
       - name: Deploy to Hosting
         uses: easingthemes/ssh-deploy@v2
         with:
-          host: 188.120.235.169
-          username: root
+          REMOTE_HOST: 188.120.235.169
+          REMOTE_USER: root
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          local_path: dist
-          remote_path: /var/www/www-root/data/www/dotgame.ai
+          SOURCE: dist
+          TARGET: /var/www/www-root/data/www/georgedotgame.fvds.ru
