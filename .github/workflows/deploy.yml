@@ -22,6 +22,6 @@ jobs:
         with:
           host: 188.120.235.169
           username: root
-          password: ${{ secrets.SSH_PASSWORD }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           local_path: dist
           remote_path: /path/to/your/hosting
