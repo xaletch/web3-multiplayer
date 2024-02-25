@@ -14,7 +14,7 @@ jobs:
       - name: Setup SSH key
         run: |
           mkdir "$HOME/.ssh"
-          echo "${{ secrets.KEY }}" > "$HOME/.ssh/key"
+          echo "${{ secrets.key }}" > "$HOME/.ssh/key"
           chmod 600 "$HOME/.ssh/key"
 
       - name: Install dependencies
