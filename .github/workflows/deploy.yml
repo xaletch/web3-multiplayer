@@ -25,3 +25,4 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.KEY }}
           SOURCE: dist
           TARGET: /var/www/www-root/data/www/georgedotgame.fvds.ru
+          ARGS: -o StrictHostKeyChecking=no
