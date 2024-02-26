@@ -14,8 +14,8 @@ jobs:
       - name: Setup SSH key
         run: |
           mkdir "$HOME/.ssh"
-          echo "${{ secrets.key }}" > "$HOME/.ssh/key"
-          chmod 600 "$HOME/.ssh/key"
+          echo "${{ secrets.KEY }}" > "$HOME/.ssh/KEY"
+          chmod 600 "$HOME/.ssh/KEY"
 
       - name: Install dependencies
         run: npm install
@@ -26,4 +26,4 @@ jobs:
       - name: Deploy to Hosting
         run: |
           cd dist
-          rsync -e "ssh -p 22 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/www-root/data/www/georgedotgame.fvds.ru/
+          rsync -e "ssh -p 22 -i $HOME/.ssh/KEY -o StrictHostKeyChecking=no" --archive --compress --delete . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/www-root/data/www/georgedotgame.fvds.ru/
