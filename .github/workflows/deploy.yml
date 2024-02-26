@@ -26,4 +26,4 @@ jobs:
       - name: Deploy to Hosting
         run: |
           cd dist
-          rsync -e "ssh -p 22 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ${{ secrets.SSHUSER }}@${{ secrets.SSHHOST }}:/var/www/www-root/data/www/georgedotgame.fvds.ru/
+          rsync -e "ssh -p 22 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/www-root/data/www/georgedotgame.fvds.ru/
