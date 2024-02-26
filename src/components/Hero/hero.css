@@ -1,35 +1,50 @@
 .hero {
   width: 100%;
   min-height: 1080px;
-  background-image: url("../../assets/images/heroBG.jpg");
+  background-image: url("../../assets/images/heroBG.png");
   background-repeat: no-repeat;
   background-position: center top;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 .hero_content {
-  max-width: 1033px;
+  max-width: 760px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 30px;
+}
+.hero_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  z-index: 2;
 }
 .hero_content-title {
-  text-align: center;
-  font-size: 64px;
+  font-size: 66px;
+  text-transform: uppercase;
   font-weight: 500;
-  line-height: 80px;
+}
+.hero_content-title_two {
+  margin-top: 10px;
+  font-family: var(--Font-StolzlBook);
+  font-weight: 700;
+  font-size: 38px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 0.1px var(--orange-color);
 }
 .hero_content-description {
+  margin-top: 27px;
   max-width: 720px;
-  text-align: center;
   font-size: 20px;
   font-family: var(--Font-StolzlBook);
   font-weight: 400;
   line-height: 27px;
+}
+.hero_content-btn {
+  margin-top: 56px;
 }
 
 /* АДАПТИВ */
@@ -78,12 +93,12 @@
     font-size: 13px;
     line-height: 20px;
   }
-}
-@media screen and (max-width: 480px) {
   .hero {
     background-image: url("../../assets/images/heroBgMobile.png");
     background-size: cover;
   }
+}
+@media screen and (max-width: 480px) {
   .hero_content-title {
     width: 100%;
   }

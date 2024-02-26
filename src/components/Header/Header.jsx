@@ -40,54 +40,12 @@ export const Header = () => {
       variants={headerAnimation}
       className="header"
     >
-      <svg
-        className="header_bg"
-        width="1655"
-        height="81"
-        viewBox="0 0 1655 81"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          opacity="0.8"
-          d="M0 1.4908L1622 0L1655 51.681L1652.21 81H23.909L0 1.4908Z"
-          fill="#1A1A1A"
-        />
-      </svg>
-      <svg
-        className="header_svg-left"
-        width="50"
-        height="81"
-        viewBox="0 0 50 81"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M24.5789 1H12.7895L1 19.2308L36.3684 80H49L15.3158 19.2308L24.5789 1Z"
-          fill="white"
-          stroke="white"
-        />
-      </svg>
-      <svg
-        className="header_svg-right"
-        width="46"
-        height="81"
-        viewBox="0 0 46 81"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M45 62.1613L3.91304 1H1.5L35.2174 58.7634L23.4783 80H34.2391L45 62.1613Z"
-          fill="white"
-          stroke="white"
-        />
-      </svg>
       <motion.div
         className={`header_wrapper ${isOpenMenu ? "header_wrapper-open" : ""}`}
         variants={headerAnimation}
       >
         <div className="header_l-content">
-          <Link to="/">
+          <Link to="/" style={{ display: "flex" }}>
             <img src={link_img.logo} alt="logo" />
           </Link>
           <nav className="header_nav">
@@ -149,18 +107,6 @@ export const Header = () => {
             }`}
             onClick={() => setOpenMenu(!isOpenMenu)}
           >
-            <svg
-              width="51"
-              height="37"
-              viewBox="0 0 51 37"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.508563 36.5L1.11992 0.5H50.4813L49.1567 36.5H0.508563Z"
-                stroke="#F9F9F9"
-              />
-            </svg>
             <span>
               {isOpenMenu ? (
                 <svg
@@ -190,7 +136,7 @@ export const Header = () => {
               )}
             </span>
           </button>
-          <OrangeButton index="header_orange-btn">Connect Wallet</OrangeButton>
+          <button className="header_orange-btn">Connect Wallet</button>
         </div>
       </motion.div>
 
@@ -203,7 +149,7 @@ export const Header = () => {
               </li>
             ))}
           </ul>
-          <OrangeButton index="header_orange-btn">Connect Wallet</OrangeButton>
+          <button className="header_menu-btn">Connect Wallet</button>
           <div className="header_menu-social_media">
             <Link to={"#"} className="header_menu-social_media-link">
               <svg
